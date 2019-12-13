@@ -3,6 +3,7 @@ package com.examples.Laba;
 import org.zeromq.SocketType;
 import org.zeromq.ZContext;
 import org.zeromq.ZMQ;
+import org.zeromq.ZMsg;
 
 import java.io.Closeable;
 import java.io.IOException;
@@ -37,7 +38,7 @@ public class CacheDealer implements Closeable {
             long currentTime = System.currentTimeMillis();
             poller.poll(Math.max(0, next - currentTime));
             if(poller.pollin(0)){ //DealerPollin
-
+                ZMsg msg = ZMsg.recvMsg(Socket);
             }
         }
     }
