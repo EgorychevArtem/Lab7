@@ -46,6 +46,8 @@ public class CacheDealer implements Closeable {
                     reply.add(Command.RESULT(storage.getCache(cmd.getIndex())).toString());
                     reply.add(clientId);
                     reply.send(Socket);
+                } else if(cmd.matchType(CommandType.PUT)){
+                    
                 }
             }
         }
