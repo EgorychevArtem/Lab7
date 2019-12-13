@@ -42,6 +42,7 @@ public class CacheDealer implements Closeable {
                 ZFrame clientId = msg.pop();
                 Command cmd = Command.fromStr(msg.popString());
                 if(cmd.matchType(CommandType.GET)){
+                    int val = storage.getCache()
                     ZMsg reply = new ZMsg();
                     reply.add(Command.RESULT(storage.get(cmd.getIndex())).toString())
                 }
