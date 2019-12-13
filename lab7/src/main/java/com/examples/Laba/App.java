@@ -24,6 +24,7 @@ public class App {
             result.send(client);
 
             ZMsg request = ZMsg.recvMsg(client);
+            String string = request.popString();
         }
     }
 }
