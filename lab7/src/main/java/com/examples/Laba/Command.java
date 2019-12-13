@@ -19,5 +19,8 @@ public class Command {
         if(split[0] == "NOTIFY"){
             return new Command(CommandType.NOTIFY, Integer.parseInt(split[1]), Integer.parseInt(split[2]));
         }
+        if(split[0] == "RESULT"){
+            return new Command(CommandType.RESULT, Integer.parseInt(split[1]));
+        }
     }
 }
