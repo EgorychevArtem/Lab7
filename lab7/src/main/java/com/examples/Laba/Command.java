@@ -8,6 +8,7 @@ public class Command {
         this.args = args;
     }
 
-    public static Command fromStr(String popString) {
+    public static Command fromStr(String cmd) {
+        String[] split = cmd
     }
 }
