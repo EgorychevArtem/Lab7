@@ -8,5 +8,7 @@ public class App {
     public static void main(String[] args){
         ZContext zContext = new ZContext();
         ZMQ.Socket client = zContext.createSocket(SocketType.REQ);
+        client.setHWM(0);
+        
     }
 }
