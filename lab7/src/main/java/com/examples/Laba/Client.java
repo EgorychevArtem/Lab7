@@ -13,7 +13,9 @@ public class Client {
             ZContext context = new ZContext();
             Scanner scanner = new Scanner(System.in);
             Client client = new Client(context)
-        )
+        ) {
+            client.connect(Proxy.getClientRouterAddr());
+        }
 
 
          public Client(ZContext context) {
