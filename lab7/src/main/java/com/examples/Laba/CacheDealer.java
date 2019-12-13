@@ -33,7 +33,9 @@ public class CacheDealer implements Closeable {
     }
 
     public void handle() {
-        
+        while (!Thread.currentThread().isInterrupted()){
+            
+        }
     }
 
     private static int ParseInt(String arg) {
