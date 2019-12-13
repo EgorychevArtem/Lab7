@@ -6,19 +6,24 @@ import java.util.Map;
 import java.util.Optional;
 import java.util.TreeMap;
 import java.util.stream.Collectors;
+import java.util.stream.Stream;
 
 public class CacheDealerStorage {
     Map<String, CacheDealerMeta> dealers = new TreeMap<>();
 
     public Optional<ZFrame> getDealerId(int id) {
+        return getAliveDealers(id)
+                .findAny()
+                .map(CacheDealerMeta::getId);
+    }
+
+    public Stream<CacheDealerMeta> getAliveDealers(int id){
         dealers.values().stream()
                 .filter(d -> d.inside(id))
                 .filter(d -> !d.isAlive())
                 .collect(Collectors.toList())
                 .forEach(d -> dealers.remove(d.id.toString()));
         return dealers.values().stream()
-                .filter(d -> d.inside(id))
-                .findAny()
-                .map(CacheDealerMeta::getId);
+                .filter(d -> d.inside(id));
     }
 }
