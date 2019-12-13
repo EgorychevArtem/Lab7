@@ -45,6 +45,7 @@ public class CacheDealer implements Closeable {
                     ZMsg reply = new ZMsg();
                     reply.add(Command.RESULT(storage.getCache(cmd.getIndex())).toString());
                     reply.add(clientId);
+                    reply.send(Socket);
                 }
             }
         }
