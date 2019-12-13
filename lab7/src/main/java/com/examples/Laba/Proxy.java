@@ -66,7 +66,7 @@ public class Proxy implements Closeable {
                     }
                 }
                 if(!ok){
-                    sendResultToClient(clienId, Command.);
+                    sendResultToClient(clienId, CommandType.ERROR.toString());
                 }
             }
         if(poller.pollin(1)){
