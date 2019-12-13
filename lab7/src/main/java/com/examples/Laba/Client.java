@@ -51,7 +51,7 @@ public class Client implements Closeable{
 
         ZMsg rec = ZMsg.recvMsg(Socket);
         log.info("Received message: " + rec);
-        
+        Command cmd = Command.fromStr(rec.popString());
     }
 
     @Override
