@@ -39,9 +39,13 @@ public class Client implements Closeable{
             out.print(" ");
             Command cmd = Command.fromStr(scanner.nextLine());
             if(cmd.matchType(CommandType.GET)){
-                int res
+                int res = SendMsg(cmd);
             }
         }
+    }
+
+    private int SendMsg(Command cmd) {
+        ZMsg msg = ZMsg.newStringMsg(cmd.toString());
     }
 
     @Override
