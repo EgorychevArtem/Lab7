@@ -32,5 +32,7 @@ public class CacheDealerMeta {
     }
 
     public void setRange(int start, int end) {
+        this.start = start;
+        this.end = end;
     }
 }
