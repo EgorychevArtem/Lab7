@@ -4,6 +4,7 @@ import org.zeromq.*;
 
 import java.io.Closeable;
 import java.io.IOException;
+import java.util.List;
 import java.util.Optional;
 import java.util.logging.Logger;
 
@@ -56,7 +57,7 @@ public class Proxy implements Closeable {
                         ok = false;
                     }
                 } else if (cmd.matchType(CommandType.PUT)){
-                    
+                    List<ZFrame> dealersId = dealers.getAllDealers(cmd.getIndex());
                 }
             }
         }
