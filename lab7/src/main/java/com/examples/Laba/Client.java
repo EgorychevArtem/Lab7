@@ -41,7 +41,7 @@ public class Client implements Closeable{
             if(cmd.matchType(CommandType.GET)){
                 Integer res = SendMsg(cmd);
                 out.println(res != null ? res : "ERROR");
-            }
+            } else if
         }
     }
 
