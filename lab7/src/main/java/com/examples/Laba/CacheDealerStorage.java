@@ -11,5 +11,8 @@ public class CacheDealerStorage {
 
     public Optional<ZFrame> getDealerId(int id) {
         dealers.values().stream()
+                .filter(d -> d.inside(id))
+                .filter(d -> !d.isAlive())
+
     }
 }
