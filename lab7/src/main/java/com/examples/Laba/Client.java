@@ -38,6 +38,9 @@ public class Client implements Closeable{
         while (!Thread.currentThread().isInterrupted()){
             out.print(" ");
             Command cmd = Command.fromStr(scanner.nextLine());
+            if(cmd.matchType(CommandType.GET)){
+                int res
+            }
         }
     }
 
