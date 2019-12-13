@@ -50,6 +50,7 @@ public class Command {
     public int getResult(){
         return (int) args[0];
     }
+
     public static Command OK(int res) {
         return new Command(CommandType.OK, res);
     }
