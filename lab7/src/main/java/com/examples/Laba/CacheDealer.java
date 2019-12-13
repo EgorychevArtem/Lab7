@@ -27,7 +27,7 @@ public class CacheDealer implements Closeable {
                 ZContext context = new ZContext();
                 CacheDealer dealer = new CacheDealer(context,storage);
                 ){
-            
+            dealer.connect(Proxy.getCacheDealerAddr());
         }
     }
 
