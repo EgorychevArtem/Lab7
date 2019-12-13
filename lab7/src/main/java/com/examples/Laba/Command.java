@@ -22,5 +22,8 @@ public class Command {
         if(split[0] == "RESULT"){
             return new Command(CommandType.RESULT, Integer.parseInt(split[1]));
         }
+        if(split[0] == "OK"){
+            return new Command(CommandType.OK, Integer.parseInt(split[1]));
+        }
     }
 }

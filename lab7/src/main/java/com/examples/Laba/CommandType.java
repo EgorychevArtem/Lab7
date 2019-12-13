@@ -1,5 +1,5 @@
 package com.examples.Laba;
 
 public enum CommandType {
-    GET,PUT,NOTIFY,RESULT,OR,ERROR
+    GET,PUT,NOTIFY,RESULT,OK,ERROR
 }
