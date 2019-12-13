@@ -61,7 +61,13 @@ public class Proxy implements Closeable {
         }
     }
 
-                @Override
+    private void sendCommandtoDealer(ZFrame dealerId, ZFrame clienId, Command cmd) {
+        ZMsg msg = new ZMsg();
+        msg.add(dealerId);
+        
+    }
+
+    @Override
     public void close() throws IOException {
         poller.close();
         context.destroySocket(cacheRouter);
