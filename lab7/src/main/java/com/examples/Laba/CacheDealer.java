@@ -18,7 +18,13 @@ public class CacheDealer implements Closeable {
 
     public static void main(String[] args){
         int start, end, init;
-        
+        start = ParseInt(args[0]);
+        end = Integer.parseInt(args[1]);
+
+    }
+
+    private static int ParseInt(String arg) {
+        return Integer.parseInt(arg);
     }
 
     public CacheDealer(ZContext context, CacheStorage storage){
