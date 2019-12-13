@@ -61,9 +61,14 @@ public class Proxy implements Closeable {
                     if(!dealersId.isEmpty()){
                         dealersId.forEach(id -> sendCommandtoDealer(id, clienId, cmd));
                         sendResultToClient(clienId, "OK");
+                } else {
+                        ok = false;
+                    }
+                }
+                if(!ok){
+                    sendResultToClient(clienId, Command.);
                 }
             }
-        }
         if(poller.pollin(1)){
 
         }
