@@ -5,6 +5,8 @@ public class CacheStorage {
     int[] cache;
 
     public CacheStorage(int start, int end, int[] cache){
+        this.start = start;
+        this.end = end;
         
     }
 }
