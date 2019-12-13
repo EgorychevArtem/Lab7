@@ -1,4 +1,6 @@
 package com.examples.Laba;
 
-public class CacheDealer {
+import java.io.Closeable;
+
+public class CacheDealer implements Closeable {
 }
