@@ -28,5 +28,10 @@ public class Command {
         if(split[0] == "ERROR"){
             return new Command(CommandType.ERROR);
         }
+        return null;
+    }
+
+    public int getIndex(){
+        return (int) args[0];
     }
 }
