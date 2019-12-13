@@ -42,7 +42,7 @@ public class Proxy implements Closeable {
     public void handle(){
         while (!Thread.currentThread().isInterrupted()){
             poller.poll();
-            if(poller.pollin(0)){
+            if(poller.pollin(0)){ //ClientPollin
                 boolean ok = true;
                 ZMsg msg = ZMsg.recvMsg(clientRouter);
                 log.info("Received message from ClientRouter: " + msg);
@@ -69,7 +69,7 @@ public class Proxy implements Closeable {
                     sendResultToClient(clienId, CommandType.ERROR.toString());
                 }
             }
-        if(poller.pollin(1)){
+        if(poller.pollin(1)){ //CachePollin
 
         }
     }
