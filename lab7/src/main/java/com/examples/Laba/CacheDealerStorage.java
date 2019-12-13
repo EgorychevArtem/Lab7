@@ -3,5 +3,5 @@ package com.examples.Laba;
 import java.util.Map;
 
 public class CacheDealerStorage {
-    Map<String>
+    Map<String, CacheDea>
 }
