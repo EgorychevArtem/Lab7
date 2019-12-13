@@ -40,6 +40,12 @@ public class Proxy implements Closeable {
     public void handle(){
         while (!Thread.currentThread().isInterrupted()){
             poller.poll();
+            if(poller.pollin(0)){
+                
+            }
+            if(poller.pollin(1)){
+
+            }
         }
     }
 
