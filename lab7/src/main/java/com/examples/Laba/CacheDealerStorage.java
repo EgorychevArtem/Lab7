@@ -34,7 +34,7 @@ public class CacheDealerStorage {
                 .filter(d -> d.inside(id));
     }
 
-    public void insert(){
-        
+    public void insert(ZFrame id, int start, int end){
+        CacheDealerMeta dealer = dealers.computeIfAbsent(id.toString(), k -> new CacheDealerMeta(id))
     }
 }
