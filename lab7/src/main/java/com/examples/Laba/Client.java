@@ -15,6 +15,7 @@ public class Client {
                 Client client = new Client(context)
         ) {
             client.connect(Proxy.getClientAddr());
+            client.handle(scanner, System.out);
         }
     }
 
