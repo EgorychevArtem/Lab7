@@ -58,6 +58,7 @@ public class CacheDealer implements Closeable {
 
     private void sendBeat() {
         ZMsg.newStringMsg(Command.NOTIFY(storage.start, storage.end).toString()).send(Socket);
+        next = System.currentTimeMillis() + BeatDurarion;
     }
 
     private static int ParseInt(String arg) {
