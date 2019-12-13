@@ -35,7 +35,9 @@ public class Client implements Closeable{
     }
 
     private void handle(Scanner scanner, PrintStream out) {
-        while (!Thread.currentThread().isInterrupted())
+        while (!Thread.currentThread().isInterrupted()){
+            out.print(" ");
+        }
     }
 
     @Override
