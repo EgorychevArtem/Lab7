@@ -18,7 +18,7 @@ public class Proxy implements Closeable {
                 Proxy proxy = new Proxy(context)
         ) {
             context.bind();
-
+            context.handle();
         }
     }
 
@@ -37,7 +37,11 @@ public class Proxy implements Closeable {
         poller.register(cacheRouter, ZMQ.Poller.POLLIN);
     }
 
-
+    public void handle(){
+        while (!Thread.currentThread().isInterrupted()){
+            poller.poll();
+        }
+    }
 
                 @Override
     public void close() throws IOException {
