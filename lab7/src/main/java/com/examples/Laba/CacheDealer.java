@@ -44,7 +44,7 @@ public class CacheDealer implements Closeable {
                 if(cmd.matchType(CommandType.GET)){
                     ZMsg reply = new ZMsg();
                     reply.add(Command.RESULT(storage.getCache(cmd.getIndex())).toString());
-                    
+                    reply.add(clientId);
                 }
             }
         }
