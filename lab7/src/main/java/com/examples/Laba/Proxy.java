@@ -41,6 +41,7 @@ public class Proxy implements Closeable {
 
                 @Override
     public void close() throws IOException {
-
+        poller.close();
+        context.destroySocket(cacheRouter);
     }
 }
