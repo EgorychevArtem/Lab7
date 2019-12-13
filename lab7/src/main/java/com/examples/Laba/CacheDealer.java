@@ -32,6 +32,10 @@ public class CacheDealer implements Closeable {
         }
     }
 
+    public void handle() {
+        
+    }
+
     private static int ParseInt(String arg) {
         return Integer.parseInt(arg);
     }
