@@ -36,7 +36,7 @@ public class Proxy implements Closeable {
     }
 
     public void bind(){
-        clientRouter.bind("tcp://localhost:3000");
+        clientRouter.bind(ClientAddr);
         cacheRouter.bind("tcp://localhost:3001");
         poller.register(clientRouter, ZMQ.Poller.POLLIN);
         poller.register(cacheRouter, ZMQ.Poller.POLLIN);
