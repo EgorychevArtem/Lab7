@@ -9,7 +9,7 @@ import java.util.TreeMap;
 public class CacheDealerStorage {
     Map<String, CacheDealerMeta> dealers = new TreeMap<>();
 
-    public Optional<ZFrame> getDealerId(int id){
-        
+    public Optional<ZFrame> getDealerId(int id) {
+        dealers.values().stream()
     }
 }
