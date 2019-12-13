@@ -58,4 +58,8 @@ public class Command {
     public static Command RESULT(int res) {
         return new Command(CommandType.RESULT, res);
     }
+
+    public static Command NOTIFY(int start, int end) {
+        return new Command(CommandType.NOTIFY, start, end);
+    }
 }
