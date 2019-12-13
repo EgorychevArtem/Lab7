@@ -18,6 +18,6 @@ public class CacheDealer implements Closeable {
     @Override
     public void close() throws IOException {
         poller.close();
-        
+        context.destroySocket(Socket);
     }
 }
