@@ -39,6 +39,7 @@ public class CacheDealer implements Closeable {
             poller.poll(Math.max(0, next - currentTime));
             if(poller.pollin(0)){ //DealerPollin
                 ZMsg msg = ZMsg.recvMsg(Socket);
+                log.info("Received msg: " + msg);
             }
         }
     }
