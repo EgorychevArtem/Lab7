@@ -32,7 +32,7 @@ public class Command {
     }
 
     public boolean matchType(CommandType t){
-        
+        return this.type == type;
     }
 
     public int getIndex(){
