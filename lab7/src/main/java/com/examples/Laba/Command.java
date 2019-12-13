@@ -34,4 +34,16 @@ public class Command {
     public int getIndex(){
         return (int) args[0];
     }
+    public int getValue(){
+        return (int) args[1];
+    }
+    public int getStart(){
+        return (int) args[0];
+    }
+    public int getEnd(){
+        return (int) args[1];
+    }
+    public int getResult(){
+        return (int) args[0];
+    }
 }
