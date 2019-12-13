@@ -15,6 +15,11 @@ public class CacheDealer implements Closeable {
     public CacheStorage storage;
     long next;
 
+    public CacheDealer(ZContext context, CacheStorage storage){
+        
+    }
+
+
     @Override
     public void close() throws IOException {
         poller.close();
