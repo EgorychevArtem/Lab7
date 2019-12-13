@@ -26,4 +26,7 @@ public class CacheDealerMeta {
     public ZFrame getId(){
         return id;
     }
+
+    public void updateBeat() {
+    }
 }
