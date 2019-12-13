@@ -16,5 +16,9 @@ public class CacheDealerStorage {
                 .filter(d -> !d.isAlive())
                 .collect(Collectors.toList())
                 .forEach(d -> dealers.remove(d.id.toString()));
+        return dealers.values().stream()
+                .filter(d -> d.inside(id))
+                .findAny()
+                .
     }
 }
