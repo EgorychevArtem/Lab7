@@ -37,5 +37,6 @@ public class CacheDealerStorage {
     public void insert(ZFrame id, int start, int end){
         CacheDealerMeta dealer = dealers.computeIfAbsent(id.toString(), k -> new CacheDealerMeta(id));
         dealer.updateBeat();
+        dealer.setRange(start, end);
     }
 }
