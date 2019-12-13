@@ -4,6 +4,7 @@ import org.zeromq.*;
 
 import java.io.Closeable;
 import java.io.IOException;
+import java.util.Optional;
 import java.util.logging.Logger;
 
 public class Proxy implements Closeable {
@@ -48,7 +49,7 @@ public class Proxy implements Closeable {
                 msg.pop();
                 Command cmd = Command.fromStr(msg.popString());
                 if(cmd.matchType(CommandType.GET)){
-                    
+                    Optional<ZFrame> dealerId = dealers.get
                 }
             }
             if(poller.pollin(1)){
