@@ -49,7 +49,9 @@ public class Client implements Closeable{
     }
 
     private String SendPutMsg(Command putCmd) {
-
+        ZMsg msg = ZMsg.newStringMsg(putCmd.toString());
+        log.info("Sending message: " + msg);
+        msg.send(Socket);
     }
 
     private Integer SendGetMsg(Command getCmd) {
