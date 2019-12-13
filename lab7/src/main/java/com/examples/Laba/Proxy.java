@@ -17,6 +17,7 @@ public class Proxy implements Closeable {
                 ZContext context = new ZContext();
                 Proxy proxy = new Proxy(context)
         ) {
+            context.bind();
 
         }
     }
