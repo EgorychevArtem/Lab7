@@ -21,6 +21,9 @@ public class App {
             String msg = in.nextLine();
             ZMsg result = new ZMsg();
             result.addString(msg);
+            result.send(client);
+
+            
         }
     }
 }
