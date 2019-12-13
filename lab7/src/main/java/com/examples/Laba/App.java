@@ -23,7 +23,7 @@ public class App {
             result.addString(msg);
             result.send(client);
 
-            
+            ZMsg request = ZMsg.recvMsg(client);
         }
     }
 }
