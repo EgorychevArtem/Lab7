@@ -1,6 +1,6 @@
 package com.examples.Laba;
 
-/*import org.zeromq.SocketType;
+import org.zeromq.SocketType;
 import org.zeromq.ZContext;
 import org.zeromq.ZMQ;
 import org.zeromq.ZMsg;
@@ -15,7 +15,7 @@ public class Client implements Closeable{
     private static final Logger log = Logger.getLogger(Client.class.getName());
     ZContext context;
     ZMQ.Socket Socket;
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException {
         try (
                 Scanner scanner = new Scanner(System.in);
                 ZContext context = new ZContext();
