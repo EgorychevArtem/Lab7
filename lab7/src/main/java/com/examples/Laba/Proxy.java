@@ -3,6 +3,7 @@ package com.examples.Laba;
 import org.zeromq.SocketType;
 import org.zeromq.ZContext;
 import org.zeromq.ZMQ;
+import org.zeromq.ZMsg;
 
 import java.io.Closeable;
 import java.io.IOException;
@@ -41,7 +42,7 @@ public class Proxy implements Closeable {
         while (!Thread.currentThread().isInterrupted()){
             poller.poll();
             if(poller.pollin(0)){
-                
+                ZMsg msg = ZMsg.recvMsg(clientRouter)
             }
             if(poller.pollin(1)){
 
