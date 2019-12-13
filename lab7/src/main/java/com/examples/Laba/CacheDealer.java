@@ -16,7 +16,7 @@ public class CacheDealer implements Closeable {
     public CacheStorage storage;
     long next;
 
-    public static void main(String[] args){
+    public static void main(String[] args) throws IOException {
         int start, end, init;
         start = ParseInt(args[0]);
         end = ParseInt(args[1]);
@@ -25,7 +25,10 @@ public class CacheDealer implements Closeable {
         CacheStorage storage = new CacheStorage(start,end,init);
         try (
                 ZContext context = new ZContext();
-                )
+                CacheDealer dealer = new CacheDealer(context,storage);
+                ){
+            
+        }
     }
 
     private static int ParseInt(String arg) {
