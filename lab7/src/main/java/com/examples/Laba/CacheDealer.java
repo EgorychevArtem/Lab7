@@ -40,6 +40,7 @@ public class CacheDealer implements Closeable {
             if(poller.pollin(0)){ //DealerPollin
                 ZMsg msg = ZMsg.recvMsg(Socket);
                 log.info("Received msg: " + msg);
+
             }
         }
     }
@@ -64,5 +65,9 @@ public class CacheDealer implements Closeable {
     public void close() throws IOException {
         poller.close();
         context.destroySocket(Socket);
+    }
+
+    public static long getBeatDuration(){
+        return 
     }
 }
