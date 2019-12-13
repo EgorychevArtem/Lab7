@@ -9,6 +9,9 @@ public class App {
         ZContext zContext = new ZContext();
         ZMQ.Socket client = zContext.createSocket(SocketType.REQ);
         client.setHWM(0);
-        client.connect()
+        client.connect("localhost:8080");
+        System.out.println("Connect to client");
+
+        
     }
 }
