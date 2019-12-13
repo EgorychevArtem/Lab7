@@ -111,5 +111,8 @@ public class Proxy implements Closeable {
         context.destroySocket(clientRouter);
     }
 
-    
+    public static String getClientAddr(){
+        return ClientAddr;
+    }
+    public 
 }
