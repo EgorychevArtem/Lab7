@@ -23,6 +23,9 @@ public class CacheDealer implements Closeable {
         init = ParseInt(args[2]);
 
         CacheStorage storage = new CacheStorage(start,end,init);
+        try (
+                ZContext context = new ZContext();
+                )
     }
 
     private static int ParseInt(String arg) {
