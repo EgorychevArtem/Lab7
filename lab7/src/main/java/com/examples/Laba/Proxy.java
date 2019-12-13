@@ -30,7 +30,9 @@ public class Proxy implements Closeable {
     }
 
     public void bind(){
-        clientRouter.bind()
+        clientRouter.bind("tcp://localhost:3000");
+        cacheRouter.bind("tcp://localhost:3001");
+        
     }
 
 
