@@ -5,9 +5,11 @@ import org.zeromq.ZContext;
 import org.zeromq.ZMQ;
 import org.zeromq.ZMsg;
 
+import java.io.PrintStream;
 import java.util.Scanner;
 
 public class Client {
+    ZContext context;
     public static void main(String[] args) {
         try (
                 ZContext context = new ZContext();
@@ -19,10 +21,13 @@ public class Client {
         }
     }
 
+    private void handle(Scanner scanner, PrintStream out) {
+    }
 
-         public Client(ZContext context) {
-                this.context = context;
-        }
+
+    public Client(ZContext context) {
+        this.context = context;
+    }
 
     }
 }
