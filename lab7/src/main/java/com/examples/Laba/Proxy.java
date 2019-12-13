@@ -114,5 +114,7 @@ public class Proxy implements Closeable {
     public static String getClientAddr(){
         return ClientAddr;
     }
-    public 
+    public static String getCacheDealerAddr(){
+        return CacheDealerAddr;
+    }
 }
