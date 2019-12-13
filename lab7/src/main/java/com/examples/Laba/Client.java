@@ -50,6 +50,8 @@ public class Client implements Closeable{
         msg.send(Socket);
 
         ZMsg rec = ZMsg.recvMsg(Socket);
+        log.info("Received message: " + rec);
+        
     }
 
     @Override
