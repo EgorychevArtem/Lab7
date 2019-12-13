@@ -1,6 +1,6 @@
 package com.examples.Laba;
 
-import org.zeromq.*;
+/import org.zeromq.*;
 
 import java.io.Closeable;
 import java.io.IOException;
@@ -14,13 +14,14 @@ public class Proxy implements Closeable {
     public ZMQ.Socket clientRouter, cacheRouter;
     public ZMQ.Poller poller;
     public CacheDealerStorage dealers;
+
     public static void main(String[] args) throws IOException {
         try (
                 ZContext context = new ZContext();
                 Proxy proxy = new Proxy(context)
         ) {
-            context.bind();
-            context.handle();
+            proxy.bind();
+            proxy.handle();
         }
     }
 
