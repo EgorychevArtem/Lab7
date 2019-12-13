@@ -2,6 +2,7 @@ package com.examples.Laba;
 
 import org.zeromq.ZFrame;
 
+import java.util.List;
 import java.util.Map;
 import java.util.Optional;
 import java.util.TreeMap;
@@ -15,6 +16,12 @@ public class CacheDealerStorage {
         return getAliveDealers(id)
                 .findAny()
                 .map(CacheDealerMeta::getId);
+    }
+
+    public List<ZFrame> getAllDealers(int id){
+        return getAliveDealers(id)
+                .map(CacheDealerMeta::getId)
+                .collect(Collectors.toList());
     }
 
     public Stream<CacheDealerMeta> getAliveDealers(int id){
