@@ -69,6 +69,6 @@ public class CacheDealer implements Closeable {
     }
 
     public static long getBeatDuration(){
-        return BeatD
+        return BeatDurarion;
     }
 }
