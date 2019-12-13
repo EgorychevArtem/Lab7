@@ -31,6 +31,7 @@ public class Command {
         return null;
     }
 
+    
     public int getIndex(){
         return (int) args[0];
     }
