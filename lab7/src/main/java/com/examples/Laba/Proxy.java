@@ -1,14 +1,13 @@
 package com.examples.Laba;
 
-import org.zeromq.SocketType;
-import org.zeromq.ZContext;
-import org.zeromq.ZMQ;
-import org.zeromq.ZMsg;
+import org.zeromq.*;
 
 import java.io.Closeable;
 import java.io.IOException;
+import java.util.logging.Logger;
 
 public class Proxy implements Closeable {
+    private static final Logger log = Logger.getLogger(Proxy.class.getName());
     public ZContext context;
     public ZMQ.Socket clientRouter, cacheRouter;
     public ZMQ.Poller poller;
@@ -43,7 +42,10 @@ public class Proxy implements Closeable {
             poller.poll();
             if(poller.pollin(0)){
                 ZMsg msg = ZMsg.recvMsg(clientRouter);
-                
+                log.info("Received message from ClientRouter: " + msg);
+                ZFrame clienId = msg.pop();
+                msg.pop();
+                Command cmd = Command.fromStr
             }
             if(poller.pollin(1)){
 
