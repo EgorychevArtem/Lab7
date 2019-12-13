@@ -28,6 +28,7 @@ public class CacheDealer implements Closeable {
                 CacheDealer dealer = new CacheDealer(context,storage);
                 ){
             dealer.connect(Proxy.getCacheDealerAddr());
+            dealer.handle();
         }
     }
 
