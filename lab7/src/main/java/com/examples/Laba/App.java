@@ -24,7 +24,6 @@ public class App {
             result.send(client);
 
             ZMsg request = ZMsg.recvMsg(client);
-            String string = request.popString();
             System.out.println(request.toString());
             request.destroy();
         }
