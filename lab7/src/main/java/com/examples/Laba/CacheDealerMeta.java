@@ -28,5 +28,6 @@ public class CacheDealerMeta {
     }
 
     public void updateBeat() {
+        lastBeat = System.currentTimeMillis();
     }
 }
