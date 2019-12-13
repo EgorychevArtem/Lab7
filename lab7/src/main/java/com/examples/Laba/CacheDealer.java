@@ -34,7 +34,7 @@ public class CacheDealer implements Closeable {
 
     public void handle() {
         while (!Thread.currentThread().isInterrupted()){
-            
+            poller.poll(Math.max(0, next - System.currentTimeMillis()));
         }
     }
 
