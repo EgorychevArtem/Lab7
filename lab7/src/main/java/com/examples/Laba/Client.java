@@ -8,14 +8,15 @@ import org.zeromq.ZMsg;
 import java.util.Scanner;
 
 public class Client {
-    public static void main(String[] args){
+    public static void main(String[] args) {
         try (
-            ZContext context = new ZContext();
-            Scanner scanner = new Scanner(System.in);
-            Client client = new Client(context)
+                ZContext context = new ZContext();
+                Scanner scanner = new Scanner(System.in);
+                Client client = new Client(context)
         ) {
-            client.connect(Proxy.getClientRouterAddr());
+            client.connect(Proxy.getClientAddr());
         }
+    }
 
 
          public Client(ZContext context) {
