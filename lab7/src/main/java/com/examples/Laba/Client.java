@@ -7,9 +7,12 @@ import org.zeromq.ZMsg;
 
 import java.util.Scanner;
 
-public class App {
+public class Client {
     public static void main(String[] args){
-        ZContext zContext = new ZContext();
+        try {
+            ZContext zContext = new ZContext();
+        }
+
         ZMQ.Socket client = zContext.createSocket(SocketType.REQ);
         client.setHWM(0);
         client.connect("localhost:8080");
