@@ -53,4 +53,8 @@ public class Command {
     public static Command OK(int res) {
         return new Command(CommandType.OK, res);
     }
+
+    public static Command RESULT(int res) {
+        return new Command(CommandType.RESULT, res);
+    }
 }
