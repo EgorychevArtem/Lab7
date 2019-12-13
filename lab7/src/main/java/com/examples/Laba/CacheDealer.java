@@ -16,6 +16,11 @@ public class CacheDealer implements Closeable {
     public CacheStorage storage;
     long next;
 
+    public static void main(String[] args){
+        int start, end, init;
+        
+    }
+
     public CacheDealer(ZContext context, CacheStorage storage){
         this.context = context;
         this.storage = storage;
