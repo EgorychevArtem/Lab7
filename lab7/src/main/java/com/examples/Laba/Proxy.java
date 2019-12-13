@@ -21,14 +21,17 @@ public class Proxy implements Closeable {
         }
     }
 
-        public Proxy(ZContext context){
-            this.context = context;
-            this.clientRouter = context.createSocket(SocketType.ROUTER);
-            this.cacheRouter = context.createSocket(SocketType.ROUTER);
-            this.poller = context.createPoller(2);
-            this.dealers = new CacheDealerStorage();
-        }
+    public Proxy(ZContext context){
+        this.context = context;
+        this.clientRouter = context.createSocket(SocketType.ROUTER);
+        this.cacheRouter = context.createSocket(SocketType.ROUTER);
+        this.poller = context.createPoller(2);
+        this.dealers = new CacheDealerStorage();
+    }
 
+    public void bind(){
+        clientRouter.bind()
+    }
 
 
 
