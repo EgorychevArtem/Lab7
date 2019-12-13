@@ -9,7 +9,8 @@ import java.io.IOException;
 
 public class Proxy implements Closeable {
     public ZContext context;
-    public ZMQ.Socket clientRouter, cacheRouter, poller;
+    public ZMQ.Socket clientRouter, cacheRouter;
+    public ZMQ.Poller poller;
     public CacheDealerStorage dealers;
     public static void main(String[] args) throws IOException {
         try (
@@ -24,7 +25,8 @@ public class Proxy implements Closeable {
             this.context = context;
             this.clientRouter = context.createSocket(SocketType.ROUTER);
             this.cacheRouter = context.createSocket(SocketType.ROUTER);
-            
+            this.poller = context.createPoller(2);
+            this.dealers = new CacheDealerStorage();
         }
 
 
