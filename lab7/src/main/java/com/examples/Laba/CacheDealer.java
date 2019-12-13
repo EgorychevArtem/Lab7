@@ -50,7 +50,14 @@ public class CacheDealer implements Closeable {
                     storage.setCache(cmd.getIndex(), cmd.getValue());
                 }
             }
+            if (System.currentTimeMillis() > next){
+                sendBeat();
+            }
         }
+    }
+
+    private void sendBeat() {
+        ZMsg.newStringMsg(Command)
     }
 
     private static int ParseInt(String arg) {
