@@ -9,7 +9,10 @@ import java.io.IOException;
 import java.io.PrintStream;
 import java.util.Scanner;
 import java.io.Closeable;
+import java.util.logging.Logger;
+
 public class Client implements Closeable{
+    private static final Logger log = Logger.getLogger(Client.class.getName());
     ZContext context;
     ZMQ.Socket Socket;
     public static void main(String[] args) {
@@ -21,6 +24,10 @@ public class Client implements Closeable{
             client.connect(Proxy.getClientAddr());
             client.handle(scanner, System.out);
         }
+    }
+
+    private void connect(String clientAddr) {
+        Socket.connect(clientAddr);
     }
 
     private void handle(Scanner scanner, PrintStream out) {
