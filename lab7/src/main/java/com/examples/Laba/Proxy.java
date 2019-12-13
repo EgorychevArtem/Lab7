@@ -60,6 +60,7 @@ public class Proxy implements Closeable {
                     List<ZFrame> dealersId = dealers.getAllDealers(cmd.getIndex());
                     if(!dealersId.isEmpty()){
                         dealersId.forEach(id -> sendCommandtoDealer(id, clienId, cmd));
+                        sendResultToClient(clienId, "OK");
                 }
             }
         }
@@ -68,6 +69,14 @@ public class Proxy implements Closeable {
         }
     }
 }
+
+    private void sendResultToClient(ZFrame clienId, String res) {
+        ZMsg msg = new ZMsg();
+        msg.add(clienId);
+        msg.add("");
+        msg.add(res);
+        msg.send(clientRouter, false);
+    }
 
     private void sendCommandtoDealer(ZFrame dealerId, ZFrame clienId, Command cmd) {
         ZMsg msg = new ZMsg();
