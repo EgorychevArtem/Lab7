@@ -64,7 +64,9 @@ public class Proxy implements Closeable {
     private void sendCommandtoDealer(ZFrame dealerId, ZFrame clienId, Command cmd) {
         ZMsg msg = new ZMsg();
         msg.add(dealerId);
-        
+        msg.add(clienId);
+        msg.add(cmd.toString());
+        log.info("Send command to dealer: " + cmd);
     }
 
     @Override
