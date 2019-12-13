@@ -20,6 +20,6 @@ public class CacheDealerMeta {
 
 
     public boolean isAlive() {
-        return (System.currentTimeMillis() - lastBeat) < 2*CacheDealer
+        return (System.currentTimeMillis() - lastBeat) < 2*CacheDealer.getBeatDuration();
     }
 }
