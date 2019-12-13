@@ -19,6 +19,6 @@ public class CacheDealerStorage {
         return dealers.values().stream()
                 .filter(d -> d.inside(id))
                 .findAny()
-                .map(id)
+                .map(CacheDealerMeta::getId);
     }
 }
