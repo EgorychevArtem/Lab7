@@ -11,6 +11,7 @@ import java.util.logging.Logger;
 
 public class CacheDealer implements Closeable {
     private static final Logger log = Logger.getLogger(CacheDealer.class.getName());
+    public static long BeatDurarion = 500;
     public ZContext context;
     public ZMQ.Socket Socket;
     public ZMQ.Poller poller;
@@ -68,6 +69,6 @@ public class CacheDealer implements Closeable {
     }
 
     public static long getBeatDuration(){
-        return 
+        return BeatD
     }
 }
