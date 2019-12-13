@@ -13,8 +13,8 @@ public class Client {
     ZMQ.Socket Socket;
     public static void main(String[] args) {
         try (
-                ZContext context = new ZContext();
                 Scanner scanner = new Scanner(System.in);
+                ZContext context = new ZContext();
                 Client client = new Client(context)
         ) {
             client.connect(Proxy.getClientAddr());
@@ -28,6 +28,7 @@ public class Client {
 
     public Client(ZContext context) {
         this.context = context;
+        this.Socket = context.createSocket(SocketType.REQ);
     }
 
     }
