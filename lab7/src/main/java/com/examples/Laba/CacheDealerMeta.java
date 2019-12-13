@@ -30,4 +30,7 @@ public class CacheDealerMeta {
     public void updateBeat() {
         lastBeat = System.currentTimeMillis();
     }
+
+    public void setRange(int start, int end) {
+    }
 }
