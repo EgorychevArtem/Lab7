@@ -10,6 +10,7 @@ import java.util.Scanner;
 
 public class Client {
     ZContext context;
+    ZMQ.Socket Socket;
     public static void main(String[] args) {
         try (
                 ZContext context = new ZContext();
