@@ -50,4 +50,5 @@ public class Command {
     public int getResult(){
         return (int) args[0];
     }
+    
 }
