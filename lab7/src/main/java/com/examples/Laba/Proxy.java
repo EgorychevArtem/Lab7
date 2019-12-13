@@ -49,7 +49,7 @@ public class Proxy implements Closeable {
                 msg.pop();
                 Command cmd = Command.fromStr(msg.popString());
                 if(cmd.matchType(CommandType.GET)){
-                    Optional<ZFrame> dealerId = dealers.get
+                    Optional<ZFrame> dealerId = dealers.getDealerId(cmd.getIndex());
                 }
             }
             if(poller.pollin(1)){
