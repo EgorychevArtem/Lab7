@@ -25,22 +25,21 @@ public class Client implements Closeable{
             client.handle(scanner, System.out);
         }
     }
+    public Client(ZContext context) {
+        this.context = context;
+        this.Socket = context.createSocket(SocketType.REQ);
+    }
 
     private void connect(String clientAddr) {
         Socket.connect(clientAddr);
     }
 
     private void handle(Scanner scanner, PrintStream out) {
-    }
-
-
-    public Client(ZContext context) {
-        this.context = context;
-        this.Socket = context.createSocket(SocketType.REQ);
+        while (!Thread.currentThread().isInterrupted())
     }
 
     @Override
     public void close() throws IOException {
         context.destroySocket(Socket);
     }
-}*/
+}
