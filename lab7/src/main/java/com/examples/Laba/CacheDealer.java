@@ -20,6 +20,7 @@ public class CacheDealer implements Closeable {
         this.context = context;
         this.storage = storage;
         this.Socket = context.createSocket(SocketType.DEALER);
+        this.poller = context.createPoller(1);
     }
 
 
