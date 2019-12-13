@@ -1,4 +1,5 @@
 package com.examples.Laba;
 
-public class CommandType {
+public enum CommandType {
+    GET,PUT,
 }
