@@ -42,7 +42,8 @@ public class Proxy implements Closeable {
         while (!Thread.currentThread().isInterrupted()){
             poller.poll();
             if(poller.pollin(0)){
-                ZMsg msg = ZMsg.recvMsg(clientRouter)
+                ZMsg msg = ZMsg.recvMsg(clientRouter);
+                
             }
             if(poller.pollin(1)){
 
