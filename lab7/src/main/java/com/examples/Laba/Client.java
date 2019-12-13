@@ -9,9 +9,11 @@ import java.util.Scanner;
 
 public class Client {
     public static void main(String[] args){
-        try {
-            ZContext zContext = new ZContext();
-        }
+        try (
+            ZContext context = new ZContext();
+            Scanner scanner = new Scanner(System.in);
+            Client client = new Client(context)
+        )
 
         ZMQ.Socket client = zContext.createSocket(SocketType.REQ);
         client.setHWM(0);
