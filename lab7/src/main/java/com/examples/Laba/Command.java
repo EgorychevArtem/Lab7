@@ -9,6 +9,6 @@ public class Command {
     }
 
     public static Command fromStr(String cmd) {
-        String[] split = cmd
+        String[] split = cmd.trim().split(" ");
     }
 }
