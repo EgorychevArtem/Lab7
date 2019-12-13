@@ -23,6 +23,10 @@ public class CacheDealer implements Closeable {
         this.poller = context.createPoller(1);
     }
 
+    public void connect(String addr){
+        Socket.connect(addr);
+        poller.register(Socket, ZMQ.Poller.POLLIN);
+    }
 
     @Override
     public void close() throws IOException {
