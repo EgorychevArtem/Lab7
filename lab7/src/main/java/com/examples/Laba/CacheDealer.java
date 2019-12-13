@@ -20,6 +20,7 @@ public class CacheDealer implements Closeable {
         int start, end, init;
         start = ParseInt(args[0]);
         end = ParseInt(args[1]);
+        init = ParseInt(args[2]);
 
     }
 
