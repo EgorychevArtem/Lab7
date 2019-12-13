@@ -1,5 +1,6 @@
 package com.examples.Laba;
 
+import org.zeromq.SocketType;
 import org.zeromq.ZContext;
 import org.zeromq.ZMQ;
 
@@ -16,7 +17,9 @@ public class CacheDealer implements Closeable {
     long next;
 
     public CacheDealer(ZContext context, CacheStorage storage){
-        
+        this.context = context;
+        this.storage = storage;
+        this.Socket = context.createSocket(SocketType.DEALER);
     }
 
 
