@@ -16,7 +16,7 @@ public class CacheStorage {
         return cache[i -start];
     }
 
-    public int setCache(int i, int val){
+    public void setCache(int i, int val){
         cache[i - start] = val;
     }
 }
