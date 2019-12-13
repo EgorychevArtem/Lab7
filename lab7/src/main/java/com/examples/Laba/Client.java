@@ -37,6 +37,7 @@ public class Client implements Closeable{
     private void handle(Scanner scanner, PrintStream out) {
         while (!Thread.currentThread().isInterrupted()){
             out.print(" ");
+            Command cmd = Command.fromStr(scanner.nextLine());
         }
     }
 
