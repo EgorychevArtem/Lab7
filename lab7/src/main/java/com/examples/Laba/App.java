@@ -19,7 +19,8 @@ public class App {
 
         while(true){
             String msg = in.nextLine();
-            ZMsg result
+            ZMsg result = new ZMsg();
+            result.addString(msg);
         }
     }
 }
