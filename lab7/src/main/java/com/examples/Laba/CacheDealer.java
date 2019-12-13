@@ -1,9 +1,6 @@
 package com.examples.Laba;
 
-import org.zeromq.SocketType;
-import org.zeromq.ZContext;
-import org.zeromq.ZMQ;
-import org.zeromq.ZMsg;
+import org.zeromq.*;
 
 import java.io.Closeable;
 import java.io.IOException;
@@ -42,6 +39,7 @@ public class CacheDealer implements Closeable {
                 ZMsg msg = ZMsg.recvMsg(Socket);
                 log.info("Received msg: " + msg);
 
+                ZFrame clientId = msg.pop();
             }
         }
     }
