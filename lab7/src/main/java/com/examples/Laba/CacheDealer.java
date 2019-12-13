@@ -22,6 +22,7 @@ public class CacheDealer implements Closeable {
         end = ParseInt(args[1]);
         init = ParseInt(args[2]);
 
+        CacheStorage storage = new CacheStorage(start,end,init);
     }
 
     private static int ParseInt(String arg) {
