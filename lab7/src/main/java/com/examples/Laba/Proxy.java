@@ -66,7 +66,8 @@ public class Proxy implements Closeable {
         msg.add(dealerId);
         msg.add(clienId);
         msg.add(cmd.toString());
-        log.info("Send command to dealer: " + cmd);
+        log.info("Send command to dealer: " + msg);
+        msg.send(cacheRouter, false);
     }
 
     @Override
