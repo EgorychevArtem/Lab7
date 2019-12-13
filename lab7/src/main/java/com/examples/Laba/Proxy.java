@@ -9,7 +9,7 @@ import java.util.Optional;
 import java.util.logging.Logger;
 
 public class Proxy implements Closeable {
-    pr
+    private static String ClirntAddr = ""
     private static final Logger log = Logger.getLogger(Proxy.class.getName());
     public ZContext context;
     public ZMQ.Socket clientRouter, cacheRouter;
