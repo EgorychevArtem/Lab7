@@ -33,4 +33,8 @@ public class CacheDealerStorage {
         return dealers.values().stream()
                 .filter(d -> d.inside(id));
     }
+
+    public void insert(){
+        
+    }
 }
