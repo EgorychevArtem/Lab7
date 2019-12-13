@@ -58,6 +58,8 @@ public class Proxy implements Closeable {
                     }
                 } else if (cmd.matchType(CommandType.PUT)){
                     List<ZFrame> dealersId = dealers.getAllDealers(cmd.getIndex());
+                    if(!dealersId.isEmpty()){
+                        dealersId.forEach();
                 }
             }
         }
