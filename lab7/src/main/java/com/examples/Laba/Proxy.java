@@ -41,6 +41,7 @@ public class Proxy implements Closeable {
         while (!Thread.currentThread().isInterrupted()){
             poller.poll();
             if(poller.pollin(0)){
+                boolean ok = true;
                 ZMsg msg = ZMsg.recvMsg(clientRouter);
                 log.info("Received message from ClientRouter: " + msg);
                 ZFrame clienId = msg.pop();
