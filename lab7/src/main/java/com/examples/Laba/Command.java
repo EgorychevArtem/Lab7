@@ -31,7 +31,10 @@ public class Command {
         return null;
     }
 
-    
+    public boolean matchType(CommandType t){
+        
+    }
+
     public int getIndex(){
         return (int) args[0];
     }
