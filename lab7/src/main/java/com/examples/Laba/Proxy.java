@@ -1,6 +1,6 @@
 package com.examples.Laba;
 
-/import org.zeromq.*;
+import org.zeromq.*;
 
 import java.io.Closeable;
 import java.io.IOException;
