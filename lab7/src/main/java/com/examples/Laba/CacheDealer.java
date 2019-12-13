@@ -40,6 +40,7 @@ public class CacheDealer implements Closeable {
                 log.info("Received msg: " + msg);
 
                 ZFrame clientId = msg.pop();
+                Command cmd = Command.fromStr(msg.popString());
             }
         }
     }
