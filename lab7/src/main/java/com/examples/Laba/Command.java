@@ -11,7 +11,6 @@ public class Command {
     public static Command fromStr(String cmd) {
         String[] split = cmd.trim().split(" ");
         if(split[0] == "GET"){
-           // return GET(Integer.parseInt(split[1]));
             return new Command(CommandType.GET, Integer.parseInt(split[1]));
         }
         if(split[0] == "PUT"){
