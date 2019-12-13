@@ -9,7 +9,8 @@ import java.util.Optional;
 import java.util.logging.Logger;
 
 public class Proxy implements Closeable {
-    private static String ClirntAddr = ""
+    private static String ClientAddr = "tcp://localhost:3000";
+    private static String CacheDealerAddr = "tcp://localhost:3001";
     private static final Logger log = Logger.getLogger(Proxy.class.getName());
     public ZContext context;
     public ZMQ.Socket clientRouter, cacheRouter;
