@@ -1,6 +1,6 @@
 package com.examples.Laba;
 
-import org.zeromq.SocketType;
+/*import org.zeromq.SocketType;
 import org.zeromq.ZContext;
 import org.zeromq.ZMQ;
 import org.zeromq.ZMsg;
@@ -43,4 +43,4 @@ public class Client implements Closeable{
     public void close() throws IOException {
         context.destroySocket(Socket);
     }
-}
+}*/
