@@ -73,7 +73,7 @@ public class Proxy implements Closeable {
                 }
             }
         if(poller.pollin(1)){ //CachePollin
-            ZMsg msg = new ZMsg();
+            ZMsg msg = ZMsg.recvMsg(cacheRouter);
             log.info("Received message from CacheRouter: " + msg);
             ZFrame dealerId = msg.pop();
             Command cmd = Command.fromStr(msg.popString());

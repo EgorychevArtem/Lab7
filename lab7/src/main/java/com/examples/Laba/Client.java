@@ -36,7 +36,7 @@ public class Client implements Closeable{
 
     private void handle(Scanner scanner, PrintStream out) {
         while (!Thread.currentThread().isInterrupted()){
-            out.print(" ");
+            out.print("> ");
             Command cmd = Command.fromStr(scanner.nextLine());
             if(cmd.matchType(CommandType.GET)){
                 Integer res = SendGetMsg(cmd);

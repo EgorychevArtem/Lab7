@@ -1,6 +1,7 @@
 package com.examples.Laba;
 
 public class Command {
+    private static final String delimiter = " ";
     CommandType type;
     Object[] args;
     public Command(CommandType type, Object ...args){
@@ -9,7 +10,7 @@ public class Command {
     }
 
     public static Command fromStr(String cmd) {
-        String[] split = cmd.trim().split(" ");
+        String[] split = cmd.trim().split(delimiter);
         if(split[0] == "GET"){
             return new Command(CommandType.GET, Integer.parseInt(split[1]));
         }
@@ -31,7 +32,7 @@ public class Command {
         return null;
     }
 
-    public boolean matchType(CommandType t){
+    public boolean matchType(CommandType type){
         return this.type == type;
     }
 
@@ -61,5 +62,9 @@ public class Command {
 
     public static Command NOTIFY(int start, int end) {
         return new Command(CommandType.NOTIFY, start, end);
+    }
+
+    public static Command ERROR() {
+        return new Command(CommandType.ERROR);
     }
 }
